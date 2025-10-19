@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  # Sales by Store
+  - name: mrt_sales_by_store
+    description: "{{ doc('mrt_sales_by_store') }}"
+    columns:
+      - name: order_date
+        description: "Date of each sale transaction."
+        tests:
+          - not_null

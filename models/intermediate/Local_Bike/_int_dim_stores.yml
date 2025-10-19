@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_dim_stores
+    description: '{{ doc("int_dim_stores") }}'
+    columns:
+      - name: store_id
+        tests: [unique, not_null]

@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  # Top Products
+  - name: mrt_top_products
+    description: "{{ doc('mrt_top_products') }}"
+    columns:
+      - name: product_id
+        description: "Unique product identifier."
+        tests:
+          - not_null
+      - name: total_net_sales
+        description: "Total net revenue per product."
+        tests:
+          - not_null

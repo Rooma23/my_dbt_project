@@ -1,0 +1,48 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Commandes client nettoyées"
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('stg_customers')
+              field: customer_id
+      - name: store_id
+        tests:
+          - relationships:
+              to: ref('stg_stores')
+              field: store_id
+
+  - name: stg_order_items
+    description: "Détails des commandes"
+    columns:
+      - name: order_id
+        tests:
+          - relationships:
+              to: ref('stg_orders')
+              field: order_id
+      - name: product_id
+        tests:
+          - relationships:
+              to: ref('stg_products')
+              field: product_id
+
+  - name: stg_products
+    description: "Catalogue produit"
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
+      - name: brand_id
+        tests:
+          - relationships:
+              to: ref('stg_brands')
+              field: brand_id
+      - name: category_id
+        tests:
+          - relationships:
+              to: ref('stg_categories')
+              field: category_id

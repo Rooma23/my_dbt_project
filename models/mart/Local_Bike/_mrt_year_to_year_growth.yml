@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  # Year-over-Year Growth
+  - name: mrt_year_to_year_growth
+    description: "{{ doc('mrt_year_to_year_growth') }}"
+    columns:
+      - name: year
+        description: "Sales year."
+        tests:
+          - not_null

@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_dim_products
+    description: '{{ doc("int_dim_products") }}'
+    columns:
+      - name: product_id
+        tests: [unique, not_null]
