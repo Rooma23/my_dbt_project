@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  # Customer RFM
+  - name: mrt_customer_rfm
+    description: "{{ doc('mrt_customer_rfm') }}"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for each customer."
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_customers')
+                field: customer_id

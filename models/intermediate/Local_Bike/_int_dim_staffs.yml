@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_dim_staffs
+    description: '{{ doc("int_dim_staffs") }}'
+    columns:
+      - name: staff_id
+        tests: [unique, not_null]

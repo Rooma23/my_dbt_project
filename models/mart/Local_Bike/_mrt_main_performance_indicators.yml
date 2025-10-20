@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  # KPI Overview
+  - name: mrt_main_performance_indicators
+    description: "{{ doc('mrt_main_performance_indicators') }}"
+    columns:
+      - name: total_orders
+        description: "Total number of distinct orders in the period."
+        tests:
+          - not_null
+      - name: total_net_sales
+        description: "Total net sales amount after discounts."
+        tests:
+          - not_null

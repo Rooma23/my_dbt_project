@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_fact_sales
+    description: '{{ doc("int_fact_sales") }}'
+    columns:
+      - name: order_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_orders')
+                field: order_id
+      - name: product_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('int_dim_products')
+                field: product_id

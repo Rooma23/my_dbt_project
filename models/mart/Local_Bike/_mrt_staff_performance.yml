@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  # Staff Performance
+  - name: mrt_staff_performance
+    description: "{{ doc('mrt_staff_performance') }}"
+    columns:
+      - name: staff_id
+        description: "Unique staff identifier."
+        tests:
+          - relationships:
+              arguments:
+                to: ref('dim_staffs')
+                field: staff_id

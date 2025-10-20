@@ -1,0 +1,6 @@
+version: 2
+
+models:
+  # Daily Sales Summary
+  - name: mrt_daily_sales_summary
+    description: "{{ doc('mrt_daily_sales_summary') }}"

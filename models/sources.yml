@@ -5,7 +5,7 @@ sources:
     schema: google_analytics_4
     tables:
       - name: events_20210131
-      
+
   - name: google_sheets
     schema: google_sheets
     tables:
@@ -21,3 +21,21 @@ sources:
       - name: order_item
       - name: seller
       - name: user
+
+  - name: airbnb
+    schema: airbnb
+    tables:
+      - name: listings
+
+  - name: Local_Bike
+    schema: Local_Bike
+    tables:
+      - name: brands
+      - name: categories
+      - name: customers
+      - name: order_items
+      - name: orders
+      - name: products
+      - name: staffs
+      - name: stocks
+      - name: stores
